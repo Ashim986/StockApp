@@ -18,3 +18,16 @@ struct StockObject: Decodable {
 struct StockData: Decodable {
     var data : [StockObject]
 }
+
+
+struct UserData  {
+    var summary : String
+    var title : String
+    var ticker : String
+    
+    init(summary : String, title : String , ticker : String) {
+        self.summary = summary
+        self.title = title
+        self.ticker = ticker
+    }
+}

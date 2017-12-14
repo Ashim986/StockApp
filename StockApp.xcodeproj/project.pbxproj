@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9A6974871FE1BF14000BC7E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6974861FE1BF14000BC7E5 /* AppDelegate.swift */; };
-		9A6974891FE1BF14000BC7E5 /* StockPriceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6974881FE1BF14000BC7E5 /* StockPriceTableViewController.swift */; };
+		9A6974891FE1BF14000BC7E5 /* StockValueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6974881FE1BF14000BC7E5 /* StockValueTableViewController.swift */; };
 		9A69748C1FE1BF14000BC7E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A69748A1FE1BF14000BC7E5 /* Main.storyboard */; };
 		9A69748E1FE1BF14000BC7E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A69748D1FE1BF14000BC7E5 /* Assets.xcassets */; };
 		9A6974911FE1BF14000BC7E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A69748F1FE1BF14000BC7E5 /* LaunchScreen.storyboard */; };
@@ -17,6 +17,9 @@
 		9A6974BB1FE1BFBF000BC7E5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6974BA1FE1BFBF000BC7E5 /* Service.swift */; };
 		9A6974BD1FE1C1A5000BC7E5 /* StockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6974BC1FE1C1A5000BC7E5 /* StockData.swift */; };
 		9A6974BF1FE1C719000BC7E5 /* NavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6974BE1FE1C719000BC7E5 /* NavigationController+Extension.swift */; };
+		9ABB31B21FE25AB60094E8A0 /* StockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABB31B11FE25AB60094E8A0 /* StockDetailViewController.swift */; };
+		9AE0B5321FE1F3B500423DB0 /* UIColors+Extension .swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0B5311FE1F3B500423DB0 /* UIColors+Extension .swift */; };
+		9AE0B5341FE2130900423DB0 /* StockValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0B5331FE2130900423DB0 /* StockValueCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,7 @@
 /* Begin PBXFileReference section */
 		9A6974831FE1BF14000BC7E5 /* StockApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A6974861FE1BF14000BC7E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9A6974881FE1BF14000BC7E5 /* StockPriceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPriceTableViewController.swift; sourceTree = "<group>"; };
+		9A6974881FE1BF14000BC7E5 /* StockValueTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockValueTableViewController.swift; sourceTree = "<group>"; };
 		9A69748B1FE1BF14000BC7E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A69748D1FE1BF14000BC7E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A6974901FE1BF14000BC7E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +56,9 @@
 		9A6974BA1FE1BFBF000BC7E5 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		9A6974BC1FE1C1A5000BC7E5 /* StockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockData.swift; sourceTree = "<group>"; };
 		9A6974BE1FE1C719000BC7E5 /* NavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationController+Extension.swift"; sourceTree = "<group>"; };
+		9ABB31B11FE25AB60094E8A0 /* StockDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailViewController.swift; sourceTree = "<group>"; };
+		9AE0B5311FE1F3B500423DB0 /* UIColors+Extension .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+Extension .swift"; sourceTree = "<group>"; };
+		9AE0B5331FE2130900423DB0 /* StockValueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockValueCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +160,7 @@
 		9A6974B61FE1BF63000BC7E5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9AE0B5331FE2130900423DB0 /* StockValueCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,7 +168,8 @@
 		9A6974B71FE1BF65000BC7E5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9A6974881FE1BF14000BC7E5 /* StockPriceTableViewController.swift */,
+				9A6974881FE1BF14000BC7E5 /* StockValueTableViewController.swift */,
+				9ABB31B11FE25AB60094E8A0 /* StockDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -178,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				9A6974BE1FE1C719000BC7E5 /* NavigationController+Extension.swift */,
+				9AE0B5311FE1F3B500423DB0 /* UIColors+Extension .swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -316,8 +325,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ABB31B21FE25AB60094E8A0 /* StockDetailViewController.swift in Sources */,
+				9AE0B5341FE2130900423DB0 /* StockValueCell.swift in Sources */,
 				9A6974BD1FE1C1A5000BC7E5 /* StockData.swift in Sources */,
-				9A6974891FE1BF14000BC7E5 /* StockPriceTableViewController.swift in Sources */,
+				9A6974891FE1BF14000BC7E5 /* StockValueTableViewController.swift in Sources */,
+				9AE0B5321FE1F3B500423DB0 /* UIColors+Extension .swift in Sources */,
 				9A6974871FE1BF14000BC7E5 /* AppDelegate.swift in Sources */,
 				9A6974BB1FE1BFBF000BC7E5 /* Service.swift in Sources */,
 				9A6974BF1FE1C719000BC7E5 /* NavigationController+Extension.swift in Sources */,

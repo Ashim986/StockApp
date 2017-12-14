@@ -20,8 +20,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.makeKeyAndVisible()
         
-        let navViewController = CustomNavigationController(rootViewController: StockPriceTableViewController())
+        let navViewController = CustomNavigationController(rootViewController: StockValueTableViewController())
         window?.rootViewController = navViewController
+        
+        application.statusBarStyle = .lightContent
+        
+        let statusBarBackgroundview = UIView()
+        statusBarBackgroundview.translatesAutoresizingMaskIntoConstraints = false
+        statusBarBackgroundview.backgroundColor = .darkGreen
+        window?.addSubview(statusBarBackgroundview)
+        NSLayoutConstraint.activate([statusBarBackgroundview.topAnchor.constraint(equalTo: (window?.topAnchor)!), statusBarBackgroundview.leftAnchor.constraint(equalTo: (window?.leftAnchor)!), statusBarBackgroundview.widthAnchor.constraint(equalTo: (window?.widthAnchor)!),statusBarBackgroundview.heightAnchor.constraint(equalToConstant: 20)])
         return true
     }
 
