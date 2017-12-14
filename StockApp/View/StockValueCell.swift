@@ -22,6 +22,16 @@ class StockValuesCell : UITableViewCell{
         label.backgroundColor = .darkBlue
         return label
     }()
+    let companyNameLabel : UILabel = {
+       let label = UILabel()
+        label.text = "Company Name"
+        label.textColor = .lightGray
+        label.textAlignment = .left
+        label.font = UIFont.boldSystemFont(ofSize: 10)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = .darkBlue
+        return label
+    }()
     
     let containerView : UIView = {
        let view = UIView()
@@ -57,6 +67,7 @@ class StockValuesCell : UITableViewCell{
     }
     private func setupUI(){
         addSubview(tickerLabel)
+        addSubview(companyNameLabel)
         addSubview(separatorLineView)
         addSubview(containerView)
         containerView.addSubview(stockInfoLabel)
@@ -66,7 +77,9 @@ class StockValuesCell : UITableViewCell{
     
     private func setupConstraintForViewComponent(){
         
-        NSLayoutConstraint.activate([tickerLabel.centerYAnchor.constraint(equalTo: centerYAnchor), tickerLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),tickerLabel.widthAnchor.constraint(equalToConstant: 80),tickerLabel.heightAnchor.constraint(equalToConstant: 40)])
+        NSLayoutConstraint.activate([tickerLabel.centerYAnchor.constraint(equalTo: centerYAnchor), tickerLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),tickerLabel.widthAnchor.constraint(equalToConstant: 80),tickerLabel.heightAnchor.constraint(equalToConstant: 24)])
+        
+         NSLayoutConstraint.activate([companyNameLabel.topAnchor.constraint(equalTo: tickerLabel.bottomAnchor), companyNameLabel.leftAnchor.constraint(equalTo: tickerLabel.leftAnchor),companyNameLabel.widthAnchor.constraint(equalToConstant: 200),companyNameLabel.heightAnchor.constraint(equalToConstant: 12)])
         
         NSLayoutConstraint.activate([containerView.centerYAnchor.constraint(equalTo: centerYAnchor), containerView.rightAnchor.constraint(equalTo: rightAnchor, constant: -16),containerView.widthAnchor.constraint(equalToConstant: 100),containerView.heightAnchor.constraint(equalToConstant: 40)])
         

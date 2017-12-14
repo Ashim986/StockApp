@@ -11,9 +11,9 @@ import UIKit
 class StockValueTableViewController: UITableViewController,UISearchBarDelegate {
     
     var usersData = [
-        UserData.init(summary: "Citi Research believes Apple stock is still trading at an \"attractive valuation\" discount versus the market", title: "Citi has 5 reasons — including tax reform and global growth — why Apple can keep crushing market", ticker: "AAPL"),
-        UserData.init(summary: "U.S. stock futures are mixed this morning, as Wall Street prepares for Janet Yellen’s last Federal Open Market Committee meeting as Board Chair.  Throwing a wrench into the mix this morning was Democrat Doug Jones’ win in the Alabama senate race, defeating Republican candidate Roy Moore.  Investors are pondering what Jones’ win means for the future of the Republican tax plan.", title: "Wednesday’s Vital Data: AT&T Inc (T), Comcast Corporation (CMCSA) and Tesla Inc (TSLA)", ticker: "AAPL"),
-        UserData.init(summary: "In light of the possible role Facebook, Twitter, Google, and Amazon unwittingly played in the 2016 presidential election outcome, it would behoove them to make a concerted effort to regulate content regardless of the political winds of the day.", title: "OK Google, What Should The Internet Giants Do About The Midterm Elections", ticker: "GOOGL")
+        UserData.init(summary: "Citi Research believes Apple stock is still trading at an \"attractive valuation\" discount versus the market", title: "Citi has 5 reasons — including tax reform and global growth — why Apple can keep crushing market", ticker: "AAPL", companyName: "Apple Inc."),
+        UserData.init(summary: "U.S. stock futures are mixed this morning, as Wall Street prepares for Janet Yellen’s last Federal Open Market Committee meeting as Board Chair.  Throwing a wrench into the mix this morning was Democrat Doug Jones’ win in the Alabama senate race, defeating Republican candidate Roy Moore.  Investors are pondering what Jones’ win means for the future of the Republican tax plan.", title: "Wednesday’s Vital Data: AT&T Inc (T), Comcast Corporation (CMCSA) and Tesla Inc (TSLA)", ticker: "AAPL", companyName: "Apple Inc"),
+        UserData.init(summary: "In light of the possible role Facebook, Twitter, Google, and Amazon unwittingly played in the 2016 presidential election outcome, it would behoove them to make a concerted effort to regulate content regardless of the political winds of the day.", title: "OK Google, What Should The Internet Giants Do About The Midterm Elections", ticker: "GOOGL", companyName: "Gooble Alphabet company")
     ]
 
     let cellID = "cellID"
@@ -60,6 +60,7 @@ class StockValueTableViewController: UITableViewController,UISearchBarDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! StockValuesCell
         let userData = usersData[indexPath.row]
         cell.tickerLabel.text = userData.ticker
+        cell.companyNameLabel.text = userData.companyName
         return cell
     }
     
