@@ -118,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				9A6974B81FE1BF69000BC7E5 /* Service */,
-				9ABB31B51FE316910094E8A0 /* New Group */,
+				9ABB31B51FE316910094E8A0 /* Defalult Collection View Component */,
 				9A6974B71FE1BF65000BC7E5 /* Controller */,
 				9A6974B61FE1BF63000BC7E5 /* View */,
 				9A6974B51FE1BF61000BC7E5 /* Model */,
@@ -200,7 +200,7 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		9ABB31B51FE316910094E8A0 /* New Group */ = {
+		9ABB31B51FE316910094E8A0 /* Defalult Collection View Component */ = {
 			isa = PBXGroup;
 			children = (
 				9ABB31B31FE3167B0094E8A0 /* CollectionViewBaseController.swift */,
@@ -208,7 +208,7 @@
 				9ABB31B81FE317280094E8A0 /* DataSource.swift */,
 				9ABB31B61FE316AC0094E8A0 /* CollectionViewBaseCell.swift */,
 			);
-			path = "New Group";
+			path = "Defalult Collection View Component";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
