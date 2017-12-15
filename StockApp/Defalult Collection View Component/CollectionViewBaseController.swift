@@ -82,4 +82,42 @@ open class CollectionViewBaseController : UICollectionViewController, UICollecti
         return cell
     }
     
+    
+    open override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let resuableView : CollectionViewBaseCell
+        
+        
+        if kind == UICollectionElementKindSectionHeader {
+            if let classes = dataSource?.headerClasses(), classes.count > indexPath.section {
+                resuableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(classes[indexPath.section]), for: indexPath) as! CollectionViewBaseCell
+            }else if let classes = dataSource?.headerClasses()?.first {
+                resuableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(classes), for: indexPath) as! CollectionViewBaseCell
+            }else {
+                resuableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: defaultHeaderId, for: indexPath) as! CollectionViewBaseCell
+            }
+            resuableView.dataSourceItem = dataSource?.headerItem(indexPath.item)
+            
+        }else{
+            if let classes = dataSource?.headerClasses(), classes.count > indexPath.section {
+                resuableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(classes[indexPath.section]), for: indexPath) as! CollectionViewBaseCell
+            }else if let classes = dataSource?.headerClasses()?.first {
+                resuableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(classes), for: indexPath) as! CollectionViewBaseCell
+            }else {
+                resuableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: defaultHeaderId, for: indexPath) as! CollectionViewBaseCell
+            }
+            resuableView.dataSourceItem = dataSource?.footerItem(indexPath.section)
+        }
+        resuableView.controller = self
+        return resuableView
+    }
+    
+    open func getRefreshControl() -> UIRefreshControl {
+        let refreshcontrol = UIRefreshControl()
+        refreshcontrol.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
+        return refreshcontrol
+    }
+    
+    @objc open func handleRefresh(){
+    
+    }
 }

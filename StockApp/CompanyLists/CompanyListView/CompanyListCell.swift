@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StockValuesCell : UITableViewCell{
+class CompanyListCell: UITableViewCell{
   
    
     

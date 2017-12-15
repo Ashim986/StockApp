@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.makeKeyAndVisible()
         
-        let navViewController = CustomNavigationController(rootViewController: StockValueTableViewController())
+        let navViewController = CustomNavigationController(rootViewController: CompanyListTableViewController())
         window?.rootViewController = navViewController
         
         application.statusBarStyle = .lightContent

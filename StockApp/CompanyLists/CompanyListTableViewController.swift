@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StockValueTableViewController: UITableViewController,UISearchBarDelegate {
+class CompanyListTableViewController: UITableViewController,UISearchBarDelegate {
     
     var usersData = [
         UserData.init(summary: "Citi Research believes Apple stock is still trading at an \"attractive valuation\" discount versus the market", title: "Citi has 5 reasons — including tax reform and global growth — why Apple can keep crushing market", ticker: "AAPL", companyName: "Apple Inc."),
@@ -38,7 +38,7 @@ class StockValueTableViewController: UITableViewController,UISearchBarDelegate {
         navigationItem.title = "Stocks"
         tableView.backgroundColor = .darkBlue
         tableView.tableFooterView = UIView()
-        tableView.register(StockValuesCell.self, forCellReuseIdentifier: cellID)
+        tableView.register(CompanyListCell.self, forCellReuseIdentifier: cellID)
         setupSearchBar()
     
        //Service.sharedInstance.fetchStockForSymbol(symbol: "GOOG")
@@ -57,7 +57,7 @@ class StockValueTableViewController: UITableViewController,UISearchBarDelegate {
         return 60
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! StockValuesCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! CompanyListCell
         let userData = usersData[indexPath.row]
         cell.tickerLabel.text = userData.ticker
         cell.companyNameLabel.text = userData.companyName

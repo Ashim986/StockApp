@@ -32,4 +32,6 @@ struct UserData  {
         self.ticker = ticker
         self.companyName = companyName
     }
+    
+    
 }

@@ -42,5 +42,16 @@ open class DataSource : NSObject {
         return objects?[indexPath.item]
     }
     
+    ///If your header need a special item, return it here
+    open func headerItem(_ section : Int) -> Any? {
+        return nil
+    }
+    
+    ///If your footers need a special item, return it here
+    open func footerItem(_ section : Int)->Any? {
+        return nil
+    }
+    
+    
     
 }
