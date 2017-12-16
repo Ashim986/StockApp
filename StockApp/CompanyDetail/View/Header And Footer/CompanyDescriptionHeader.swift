@@ -6,4 +6,15 @@
 //  Copyright © 2017 ashim Dahal. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+
+class CompanyDescriptionHeader: CollectionViewBaseCell {
+    
+    override func setupViews() {
+        super.setupViews()
+        separatorLineView.isHidden = false
+        textLabel.isHidden = false
+        textLabel.text = "About"
+    }
+}

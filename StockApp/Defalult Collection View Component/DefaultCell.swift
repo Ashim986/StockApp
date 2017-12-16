@@ -58,3 +58,4 @@ class DefaultFooterCell: DefaultCell {
         label.textAlignment = .center
     }
 }
+

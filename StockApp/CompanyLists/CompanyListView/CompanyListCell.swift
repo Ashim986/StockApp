@@ -10,8 +10,6 @@ import UIKit
 
 class CompanyListCell: UITableViewCell{
   
-   
-    
     let tickerLabel  : UILabel = {
        let label = UILabel()
         label.text = "STOCK"

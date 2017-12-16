@@ -1,5 +1,5 @@
 //
-//  CompanyDescriptionCell.swift
+//  NewsCellHeaderAndFooter.swift
 //  StockApp
 //
 //  Created by ashim Dahal on 12/14/17.
@@ -8,12 +8,13 @@
 
 import UIKit
 
-
-class CompanyDescriptionCell: CollectionViewBaseCell {
-   
+class NewsCellHeaderView: CollectionViewBaseCell {
     override func setupViews() {
         super.setupViews()
-        self.backgroundColor = .yellow
         separatorLineView.isHidden = false
+        textLabel.isHidden = false
+        textLabel.text = "News"
     }
 }
+
+

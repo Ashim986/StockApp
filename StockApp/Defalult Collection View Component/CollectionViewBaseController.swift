@@ -10,7 +10,25 @@ import UIKit
 
 open class CollectionViewBaseController : UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    open var dataSource : DataSource?
+    open var dataSource : DataSource? {
+        didSet {
+            if let cellClasses = dataSource?.cellClasses() {
+                for cellClass in cellClasses {
+                    collectionView?.register(cellClass, forCellWithReuseIdentifier: NSStringFromClass(cellClass))
+                }
+            }
+            if let cellHeaderClasses = dataSource?.headerClasses() {
+                for cellHeaderClass in cellHeaderClasses {
+                    collectionView?.register(cellHeaderClass, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: NSStringFromClass(cellHeaderClass))
+                }
+            }
+            if let cellFooterClasses = dataSource?.footerClasses() {
+                for footerClass in cellFooterClasses {
+                    collectionView?.register(footerClass, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: NSStringFromClass(footerClass))
+                }
+            }
+        }
+    }
     
     open let activityIndicatorView : UIActivityIndicatorView = {
        let view = UIActivityIndicatorView(activityIndicatorStyle: .white)

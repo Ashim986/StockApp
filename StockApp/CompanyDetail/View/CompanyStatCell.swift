@@ -6,4 +6,14 @@
 //  Copyright © 2017 ashim Dahal. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class CompanyStatCell: CollectionViewBaseCell {
+    
+    
+    override func setupViews() {
+        super.setupViews()
+        self.backgroundColor = .yellow
+        separatorLineView.isHidden = false
+    }
+}
