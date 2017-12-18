@@ -13,9 +13,6 @@ class CompanyDetailDataSource : DataSource {
     let newsData = ["text 1", "text 2", "text 3"]
     let companiesDescriptions = ["value 1", "value 2"]
     
-    override func footerClasses() -> [CollectionViewBaseCell.Type]? {
-        return [GraphCellHeaderView.self,NewsCellHeaderView.self,CompanyStatHeader.self, CompanyDescriptionHeader.self]
-    }
     
     override func headerClasses() -> [CollectionViewBaseCell.Type]? {
         return[GraphCellHeaderView.self,NewsCellHeaderView.self,CompanyStatHeader.self , CompanyDescriptionHeader.self]

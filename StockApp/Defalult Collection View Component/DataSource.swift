@@ -25,9 +25,6 @@ open class DataSource : NSObject {
         return []
     }
     
-    open func footerClasses() -> [CollectionViewBaseCell.Type]?{
-        return []
-    }
     
     open func numberOfItems(_ section : Int) -> Int {
         return objects?.count ?? 0
@@ -44,11 +41,6 @@ open class DataSource : NSObject {
     
     ///If your header need a special item, return it here
     open func headerItem(_ section : Int) -> Any? {
-        return nil
-    }
-    
-    ///If your footers need a special item, return it here
-    open func footerItem(_ section : Int)->Any? {
         return nil
     }
     

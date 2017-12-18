@@ -44,18 +44,4 @@ class DefaultHeaderCell: DefaultCell {
 }
 
 
-class DefaultFooterCell: DefaultCell {
-    override var dataSourceItem: Any? {
-        didSet {
-            if dataSourceItem == nil {
-                label.text = "This is your default footer"
-            }
-        }
-    }
-    override func setupViews() {
-        super.setupViews()
-        label.text = "Footer Cell"
-        label.textAlignment = .center
-    }
-}
 

@@ -22,11 +22,7 @@ open class CollectionViewBaseController : UICollectionViewController, UICollecti
                     collectionView?.register(cellHeaderClass, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: NSStringFromClass(cellHeaderClass))
                 }
             }
-            if let cellFooterClasses = dataSource?.footerClasses() {
-                for footerClass in cellFooterClasses {
-                    collectionView?.register(footerClass, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: NSStringFromClass(footerClass))
-                }
-            }
+            
         }
     }
     
@@ -63,7 +59,7 @@ open class CollectionViewBaseController : UICollectionViewController, UICollecti
         
         collectionView?.register(DefaultCell.self, forCellWithReuseIdentifier: defaultCellId)
         collectionView?.register(DefaultHeaderCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: defaultHeaderId)
-        collectionView?.register(DefaultFooterCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: defaultFooterId)
+        
         
     }
     
@@ -105,8 +101,6 @@ open class CollectionViewBaseController : UICollectionViewController, UICollecti
     open override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let resuableView : CollectionViewBaseCell
         
-        
-        if kind == UICollectionElementKindSectionHeader {
             if let classes = dataSource?.headerClasses(), classes.count > indexPath.section {
                 resuableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(classes[indexPath.section]), for: indexPath) as! CollectionViewBaseCell
             }else if let classes = dataSource?.headerClasses()?.first {
@@ -116,16 +110,6 @@ open class CollectionViewBaseController : UICollectionViewController, UICollecti
             }
             resuableView.dataSourceItem = dataSource?.headerItem(indexPath.item)
             
-        }else{
-            if let classes = dataSource?.footerClasses(), classes.count > indexPath.section {
-                resuableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(classes[indexPath.section]), for: indexPath) as! CollectionViewBaseCell
-            }else if let classes = dataSource?.footerClasses()?.first {
-                resuableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(classes), for: indexPath) as! CollectionViewBaseCell
-            }else {
-                resuableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: defaultFooterId, for: indexPath) as! CollectionViewBaseCell
-            }
-            resuableView.dataSourceItem = dataSource?.footerItem(indexPath.section)
-        }
         resuableView.controller = self
         return resuableView
     }
