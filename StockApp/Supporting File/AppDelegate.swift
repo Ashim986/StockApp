@@ -11,9 +11,8 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
-
-
+     var window: UIWindow?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -22,14 +21,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let navViewController = CustomNavigationController(rootViewController: CompanyListTableViewController())
         window?.rootViewController = navViewController
-        
+        let statusBarBackgroundView = UIView()
         application.statusBarStyle = .lightContent
+        statusBarBackgroundView.translatesAutoresizingMaskIntoConstraints = false
+        statusBarBackgroundView.backgroundColor = .darkGreen
+        window?.addSubview(statusBarBackgroundView)
         
-        let statusBarBackgroundview = UIView()
-        statusBarBackgroundview.translatesAutoresizingMaskIntoConstraints = false
-        statusBarBackgroundview.backgroundColor = .darkGreen
-        window?.addSubview(statusBarBackgroundview)
-        NSLayoutConstraint.activate([statusBarBackgroundview.topAnchor.constraint(equalTo: (window?.topAnchor)!), statusBarBackgroundview.leftAnchor.constraint(equalTo: (window?.leftAnchor)!), statusBarBackgroundview.widthAnchor.constraint(equalTo: (window?.widthAnchor)!),statusBarBackgroundview.heightAnchor.constraint(equalToConstant: 20)])
+       
+        NSLayoutConstraint.activate([(statusBarBackgroundView.topAnchor.constraint(equalTo: (window?.topAnchor)!)), (statusBarBackgroundView.leftAnchor.constraint(equalTo: (window?.leftAnchor)!)), (statusBarBackgroundView.widthAnchor.constraint(equalTo: (window?.widthAnchor)!)), statusBarBackgroundView.heightAnchor.constraint(equalTo: (window?.heightAnchor)! , multiplier: 0.08, constant: -30)])
+        
+      
         return true
     }
 

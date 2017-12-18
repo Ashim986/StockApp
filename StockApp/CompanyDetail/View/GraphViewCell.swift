@@ -42,7 +42,6 @@ class GraphViewCell: CollectionViewBaseCell {
        
     }
     
-    
     private func addViewConstraint(){
         NSLayoutConstraint.activate([currentPriceLabel.topAnchor.constraint(equalTo: topAnchor, constant: 30), currentPriceLabel.centerXAnchor.constraint(equalTo: centerXAnchor), currentPriceLabel.heightAnchor.constraint(equalToConstant: 60)])
         NSLayoutConstraint.activate([currencySymbol.centerYAnchor.constraint(equalTo: currentPriceLabel.centerYAnchor, constant : 5), currencySymbol.rightAnchor.constraint(equalTo: currentPriceLabel.leftAnchor, constant: 5), currencySymbol.widthAnchor.constraint(equalToConstant: 30),currencySymbol.heightAnchor.constraint(equalToConstant: 30)])

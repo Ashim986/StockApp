@@ -25,13 +25,6 @@ class CompanyDetailDataSource : DataSource {
         return [GraphViewCell.self, NewsCell.self, CompanyStatCell.self,CompanyDescriptionCell.self]
     }
     
-//    override func item(_ indexPath: IndexPath) -> Any? {
-//        if indexPath.section == 1{
-//            return newsData[indexPath.item]
-//        }
-//        return companiesDescriptions[indexPath.item]
-//    }
-    
     
     override func numberOfSection() -> Int {
         return 4

@@ -12,7 +12,11 @@ struct CompanyStat {
     var open : String
     var high : String
     var low : String
-    var close : String
+    var week_high_52 : String
+    var week_low_52 : String
     var volume : String
+    var marketCapital : String
+    var ratio_PE : String
     
 }
+ 

@@ -13,7 +13,9 @@ class CompanyStatHeader : CollectionViewBaseCell{
 override func setupViews() {
     super.setupViews()
     separatorLineView.isHidden = false
-    textLabel.isHidden = false
-    textLabel.text = "Stats"
+    collectioViewCellTextLabel.isHidden = false
+    collectioViewCellTextLabel.text = "Stats"
     }
 }
+
+

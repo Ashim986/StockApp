@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 struct Service {
     
     static let sharedInstance = Service()

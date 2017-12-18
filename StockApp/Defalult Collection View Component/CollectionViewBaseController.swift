@@ -52,6 +52,7 @@ open class CollectionViewBaseController : UICollectionViewController, UICollecti
     
     open override func viewDidLoad() {
         super.viewDidLoad()
+        view.layoutIfNeeded()
         collectionView?.alwaysBounceVertical = true
         collectionView?.backgroundColor = .white
         
@@ -116,12 +117,12 @@ open class CollectionViewBaseController : UICollectionViewController, UICollecti
             resuableView.dataSourceItem = dataSource?.headerItem(indexPath.item)
             
         }else{
-            if let classes = dataSource?.headerClasses(), classes.count > indexPath.section {
+            if let classes = dataSource?.footerClasses(), classes.count > indexPath.section {
                 resuableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(classes[indexPath.section]), for: indexPath) as! CollectionViewBaseCell
-            }else if let classes = dataSource?.headerClasses()?.first {
+            }else if let classes = dataSource?.footerClasses()?.first {
                 resuableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(classes), for: indexPath) as! CollectionViewBaseCell
             }else {
-                resuableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: defaultHeaderId, for: indexPath) as! CollectionViewBaseCell
+                resuableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: defaultFooterId, for: indexPath) as! CollectionViewBaseCell
             }
             resuableView.dataSourceItem = dataSource?.footerItem(indexPath.section)
         }

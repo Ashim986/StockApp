@@ -9,7 +9,7 @@
 import UIKit
 
 class CompanyListTableViewController: UITableViewController,UISearchBarDelegate {
-    
+    var appDelegate : AppDelegate?
     var usersData = [
         UserData.init(summary: "Citi Research believes Apple stock is still trading at an \"attractive valuation\" discount versus the market", title: "Citi has 5 reasons — including tax reform and global growth — why Apple can keep crushing market", ticker: "AAPL", companyName: "Apple Inc."),
         UserData.init(summary: "U.S. stock futures are mixed this morning, as Wall Street prepares for Janet Yellen’s last Federal Open Market Committee meeting as Board Chair.  Throwing a wrench into the mix this morning was Democrat Doug Jones’ win in the Alabama senate race, defeating Republican candidate Roy Moore.  Investors are pondering what Jones’ win means for the future of the Republican tax plan.", title: "Wednesday’s Vital Data: AT&T Inc (T), Comcast Corporation (CMCSA) and Tesla Inc (TSLA)", ticker: "AAPL", companyName: "Apple Inc"),
@@ -40,10 +40,12 @@ class CompanyListTableViewController: UITableViewController,UISearchBarDelegate 
         tableView.tableFooterView = UIView()
         tableView.register(CompanyListCell.self, forCellReuseIdentifier: cellID)
         setupSearchBar()
-    
+     
        //Service.sharedInstance.fetchStockForSymbol(symbol: "GOOG")
         
     }
+    
+//    override var transitioningDelegate: UIViewControllerTransitioningDelegate?
     private func setupSearchBar() {
         tableView.tableHeaderView = stockNameSearchBar
         let textField = stockNameSearchBar.value(forKey: "searchField") as? UITextField

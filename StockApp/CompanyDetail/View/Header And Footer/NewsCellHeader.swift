@@ -12,9 +12,10 @@ class NewsCellHeaderView: CollectionViewBaseCell {
     override func setupViews() {
         super.setupViews()
         separatorLineView.isHidden = false
-        textLabel.isHidden = false
-        textLabel.text = "News"
+        collectioViewCellTextLabel.isHidden = false
+        collectioViewCellTextLabel.text = "News"
     }
 }
+
 
 

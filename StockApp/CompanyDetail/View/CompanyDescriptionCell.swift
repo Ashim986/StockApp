@@ -10,10 +10,13 @@ import UIKit
 
 
 class CompanyDescriptionCell: CollectionViewBaseCell {
+    
    
     override func setupViews() {
         super.setupViews()
         self.backgroundColor = .yellow
         separatorLineView.isHidden = false
     }
+    
+    
 }

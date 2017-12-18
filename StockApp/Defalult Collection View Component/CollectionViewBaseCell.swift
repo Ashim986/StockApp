@@ -20,7 +20,7 @@ open class CollectionViewBaseCell : UICollectionViewCell {
         return view
     }()
     
-    let textLabel : UILabel = {
+    open let collectioViewCellTextLabel : UILabel = {
         let label = UILabel()
         label.text = "News"
         label.font = UIFont.systemFont(ofSize: 30)
@@ -38,9 +38,9 @@ open class CollectionViewBaseCell : UICollectionViewCell {
     open func setupViews() {
         clipsToBounds = true
         addSubview(separatorLineView)
-        addSubview(textLabel)
+        addSubview(collectioViewCellTextLabel)
         NSLayoutConstraint.activate([separatorLineView.leftAnchor.constraint(equalTo: leftAnchor), separatorLineView.bottomAnchor.constraint(equalTo: bottomAnchor),separatorLineView.rightAnchor.constraint(equalTo: rightAnchor),separatorLineView.heightAnchor.constraint(equalToConstant: 1)])
-         NSLayoutConstraint.activate([textLabel.centerYAnchor.constraint(equalTo: centerYAnchor),textLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),textLabel.rightAnchor.constraint(equalTo: rightAnchor),textLabel.heightAnchor.constraint(equalToConstant: 34)])
+        NSLayoutConstraint.activate([collectioViewCellTextLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant : -10),collectioViewCellTextLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),collectioViewCellTextLabel.rightAnchor.constraint(equalTo: rightAnchor),collectioViewCellTextLabel.heightAnchor.constraint(equalToConstant: 34)])
     }
     
     
