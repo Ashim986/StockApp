@@ -11,7 +11,11 @@ import Foundation
 
 struct CompanyDescription: Decodable {
     var ticker : String
+    var short_description : String
     var name : String
     var stock_exchange : String
-    var short_description : String
+}
+
+struct CompanyDescriptionData : Decodable {
+    var data : [CompanyDescription]
 }

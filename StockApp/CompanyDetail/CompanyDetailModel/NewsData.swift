@@ -8,17 +8,15 @@
 
 import Foundation
 
-struct NewsData : Decodable{
+struct NewsData : Decodable {
     
-    var summary : String
     var title : String
-    var date : Date
-    var urlString : String
+    var publication_date : Date
+    var url : String
     
-    init(summary : String, title : String, date : Date, urlString: String) {
-        self.summary = summary
+    init(title : String, publication_date : Date, url: String) {
         self.title = title
-        self.date = date
-        self.urlString = urlString
+        self.publication_date = publication_date
+        self.url = url
     }
 }

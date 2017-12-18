@@ -20,7 +20,7 @@
 		9AACA7BC1FE5F6430022C4CC /* UILabel+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AACA7BB1FE5F6430022C4CC /* UILabel+extension.swift */; };
 		9AB60A8D1FE35EC400659D3F /* CompanyDetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB60A8C1FE35EC400659D3F /* CompanyDetailDataSource.swift */; };
 		9AB60A8F1FE360FA00659D3F /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB60A8E1FE360FA00659D3F /* NewsData.swift */; };
-		9AB60A911FE361CE00659D3F /* GraphData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB60A901FE361CE00659D3F /* GraphData.swift */; };
+		9AB60A911FE361CE00659D3F /* CurrentPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB60A901FE361CE00659D3F /* CurrentPrice.swift */; };
 		9AB60A931FE372CE00659D3F /* CompanyDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB60A921FE372CE00659D3F /* CompanyDescription.swift */; };
 		9AB60A951FE3746B00659D3F /* CompanyStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB60A941FE3746B00659D3F /* CompanyStat.swift */; };
 		9AB60A9C1FE3792F00659D3F /* GraphViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB60A9B1FE3792F00659D3F /* GraphViewCell.swift */; };
@@ -77,7 +77,7 @@
 		9AACA7BB1FE5F6430022C4CC /* UILabel+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+extension.swift"; sourceTree = "<group>"; };
 		9AB60A8C1FE35EC400659D3F /* CompanyDetailDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailDataSource.swift; sourceTree = "<group>"; };
 		9AB60A8E1FE360FA00659D3F /* NewsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsData.swift; sourceTree = "<group>"; };
-		9AB60A901FE361CE00659D3F /* GraphData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphData.swift; sourceTree = "<group>"; };
+		9AB60A901FE361CE00659D3F /* CurrentPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPrice.swift; sourceTree = "<group>"; };
 		9AB60A921FE372CE00659D3F /* CompanyDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDescription.swift; sourceTree = "<group>"; };
 		9AB60A941FE3746B00659D3F /* CompanyStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyStat.swift; sourceTree = "<group>"; };
 		9AB60A9B1FE3792F00659D3F /* GraphViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewCell.swift; sourceTree = "<group>"; };
@@ -190,7 +190,7 @@
 			children = (
 				9AB60A921FE372CE00659D3F /* CompanyDescription.swift */,
 				9AB60A8E1FE360FA00659D3F /* NewsData.swift */,
-				9AB60A901FE361CE00659D3F /* GraphData.swift */,
+				9AB60A901FE361CE00659D3F /* CurrentPrice.swift */,
 				9AB60A941FE3746B00659D3F /* CompanyStat.swift */,
 				9AB60A8C1FE35EC400659D3F /* CompanyDetailDataSource.swift */,
 			);
@@ -458,7 +458,7 @@
 				9ABB31B91FE317280094E8A0 /* DataSource.swift in Sources */,
 				9AB60A931FE372CE00659D3F /* CompanyDescription.swift in Sources */,
 				9AB60AA21FE3797200659D3F /* CompanyDescriptionCell.swift in Sources */,
-				9AB60A911FE361CE00659D3F /* GraphData.swift in Sources */,
+				9AB60A911FE361CE00659D3F /* CurrentPrice.swift in Sources */,
 				9A6974BF1FE1C719000BC7E5 /* NavigationController+Extension.swift in Sources */,
 				9AACA7BC1FE5F6430022C4CC /* UILabel+extension.swift in Sources */,
 			);

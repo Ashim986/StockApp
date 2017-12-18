@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct CompanyStat {
+struct CompanyStat : Decodable{
     var open : String
     var high : String
     var low : String
@@ -17,6 +17,5 @@ struct CompanyStat {
     var volume : String
     var marketCapital : String
     var ratio_PE : String
-    
 }
  

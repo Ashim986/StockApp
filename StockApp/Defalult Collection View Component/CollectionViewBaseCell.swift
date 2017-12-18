@@ -10,6 +10,7 @@ import UIKit
 
 open class CollectionViewBaseCell : UICollectionViewCell {
     open var dataSourceItem : Any?
+    
     open weak var controller : CollectionViewBaseController?
     
     open let separatorLineView : UIView = {
